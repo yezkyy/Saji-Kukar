@@ -1,0 +1,571 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#navbar-placeholder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    z-index: 1000; 
+}
+
+section {
+    height: calc(100vh - 60px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+.background-img {
+    background-image: url('/SajiKukar/assets/background.png');
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%; 
+    position: absolute;
+    top: 0; 
+    left: 0;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.content {
+    text-align: center;
+}
+
+.content-welcome {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.content-welcome h1 {
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    color: #90D26D;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 5px;
+}
+
+.content-welcome h2 {
+    margin-top: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+.search {
+    display: inline-block;
+    position: absolute;
+    left: 20%;
+    top: 120%;
+}
+
+.search input[type="text"] {
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search button[type="submit"] {
+    background-color: #90D26D;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: .9s ease;
+}
+
+.search button[type="submit"]:hover {
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+    background-color: #2C7865;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+.buttons button:first-child,
+.buttons button:last-child {
+    width: fit-content; 
+    padding: 15px 50px;
+    top: 200px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.buttons button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #2C7865;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+}
+
+.buttons button:hover {
+    color: #D9EDBF;
+}
+
+.buttons button:hover::before {
+    width: 100%;
+}
+
+.about {
+    background-color: #90D26D;
+}
+
+.about h2 {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 3px;
+}
+
+.about p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #fff;
+    margin: 30px;
+    position: absolute;
+    top: 800px;
+    left: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 650px;
+    width: 100%;
+    height: 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50%;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+    height: 36px;
+    width: 36px;
+    background-color: #343f4f;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.3s linear;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.button:active {
+    transform: scale(0.94) translateY(-50%);
+}
+
+#prev {
+    left: 25px;
+}
+
+#next {
+    right: 25px;
+}
+
+.image-container {
+    height: 320px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    height: 100%;
+    transition: all 0.4s ease;
+}
+
+.carousel img {
+    height: 100%;
+    border-radius: 18px;
+    border: 10px solid #fff;
+    object-fit: cover;
+}
+
+.kuliner {
+    background-color: #90D26D;
+    padding: 20px;
+    max-width: 1480px;
+    height: 1000px;
+}
+
+.kuliner h2 {
+    margin-bottom: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    max-width: 300px;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid transparent;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.card .content {
+    padding: 1.1rem;
+}
+
+.card .image {
+    object-fit: cover;
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card .title {
+    color: #111827;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+}
+
+.card .desc {
+    margin-top: 0.5rem;
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.card .action {
+    display: inline-flex;
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    align-items: center;
+    gap: 0.25rem;
+    background-color: #2C7865;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.card .action span {
+    transition: .3s ease;
+}
+
+.card .action:hover span {
+    transform: translateX(4px);
+}
+
+.contact {
+    background: #e8e8e8;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+}
+
+.contact .content {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.contact h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #2C7865;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #2C7865;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #90D26D;
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    background-color: #2C7865;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.form-group label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.form-group input:focus + label,
+.form-group textarea:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:not(:placeholder-shown) + label {
+    top: 10px;
+    font-size: 0.8rem;
+    color: #131313;
+}
+
+.submit-btn {
+    background-color: #2C7865;
+    color: #e6e6e6;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #5FCC7C;
+    color: #fff;
+}
+
+.social-icons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.social-icon {
+    color: #2C7865;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Keyframes untuk animasi fade in dari atas */
+@keyframes fadeInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframes untuk animasi fade out ke atas */
+@keyframes fadeOutToTop {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+/* Kelas untuk animasi fade in */
+.fade-in {
+    animation: fadeInFromTop 0.5s ease forwards;
+}
+
+/* Kelas untuk animasi fade out */
+.fade-out {
+    animation: fadeOutToTop 0.5s ease forwards;
+    animation-delay: 0.3s; /* Menunda animasi fade out untuk memberikan kesan melayang sebentar */
+}
+
+.popup-box {
+    position: fixed;
+    top: 50px; /* Tetap di tengah atas */
+    left: 30%;
+    transform: translateX(-50%);
+    width: 80%; /* Lebarkan popup */
+    max-width: 600px; /* Batasi lebar maksimum */
+    height: 80vh; /* Tinggikan popup */
+    max-height: 80vh; /* Batasi tinggi maksimum */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+/* Styling untuk tombol close */
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #888;
+}
+
+.popup-close:hover {
+    color: #555;
+}
+
+/* Styling untuk judul tempat */
+.popup-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Styling untuk deskripsi tempat */
+.popup-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Styling untuk informasi tambahan */
+.popup-details {
+    margin-top: 20px;
+}
+
+/* Styling untuk harga */
+.popup-price {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.popup-details {
+    margin-top: 20px;
+}
+
+.popup-contact {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.popup-social {
+    margin-top: 20px;
+}
+
+.popup-social .social-icon {
+    color: #2C7865;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.popup-social .social-icon:hover {
+    transform: scale(1.2);
+}
+
+.popup-map {
+    height: 300px; /* Atur tinggi peta sesuai kebutuhan */
+    width: 100%; /* Lebarkan peta hingga mencakup keseluruhan area */
+    border-radius: 8px;
+    overflow: hidden; /* Hindari overflow konten peta */
+    margin-bottom: 20px;
+}
+
+/* Styling untuk rating */
+.popup-rating {
+    color: #FFD700; /* Warna bintang rating */
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+/* Styling untuk bintang rating */
+.popup-rating .fa {
+    margin-right: 5px;
+}
+
+/* Styling untuk bintang rating yang aktif */
+.popup-rating .fa.checked {
+    color: #FFD700; /* Warna bintang aktif */
+}
+

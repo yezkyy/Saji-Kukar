@@ -1,0 +1,49 @@
+.navbar {
+    background-color: #90D26D; /* Green color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem; 
+    color: #fff;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-button {
+    font-family: 'Poppins', sans-serif; 
+    padding: 1em 2em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #1b1b1b; 
+    background-color: #D9EDBF; 
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    line-height: 1.5;
+}
+
+.navbar-button:hover {
+    background-color: #2C7865;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff; /* White text color */
+    transform: translateY(-7px);
+}
+
+.navbar-button:active {
+    transform: translateY(-1px);
+}
