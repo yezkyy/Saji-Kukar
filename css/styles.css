@@ -174,7 +174,7 @@ html {
     color: #fff;
     margin: 30px;
     position: absolute;
-    top: 750px;
+    top: 620px;
     left: 50px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -526,11 +526,11 @@ html {
 .popup-contact {
     font-size: 18px;
     color: #777;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .popup-social {
-    margin-top: 20px;
+    margin-top: -20px;
 }
 
 .popup-social .social-icon {
@@ -556,7 +556,7 @@ html {
 .popup-rating {
     color: #FFD700; /* Warna bintang rating */
     font-size: 24px;
-    margin-top: 5px;
+    margin-top: -10px;
 }
 
 /* Styling untuk bintang rating */
