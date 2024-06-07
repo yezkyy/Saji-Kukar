@@ -243,12 +243,12 @@ html {
 .kuliner {
     background-color: #90D26D;
     padding: 20px;
-    max-width: 1263px;
+    max-width: 1223px;
     height: 1000px;
 }
 
 .kuliner h2 {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     font-family: 'Poppins', sans-serif;
     font-size: 2rem;
     color: white;
