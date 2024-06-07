@@ -25,7 +25,7 @@ button.addEventListener("click", (e) => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('/SajiKukar/navbar/navbar.html')
+    fetch('../SajiKukar/navbar/navbar.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('navbar-placeholder').innerHTML = data;

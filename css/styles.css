@@ -23,7 +23,7 @@ section {
 }
 
 .background-img {
-    background-image: url('/SajiKukar/assets/background.png');
+    background-image: url('../assets/background.png');
     background-color: rgba(0, 0, 0, 0.3);
     background-blend-mode: multiply;
     background-size: cover;
@@ -174,7 +174,7 @@ html {
     color: #fff;
     margin: 30px;
     position: absolute;
-    top: 800px;
+    top: 750px;
     left: 50px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -243,7 +243,7 @@ html {
 .kuliner {
     background-color: #90D26D;
     padding: 20px;
-    max-width: 1480px;
+    max-width: 1360px;
     height: 1000px;
 }
 
@@ -545,7 +545,7 @@ html {
 }
 
 .popup-map {
-    height: 300px; /* Atur tinggi peta sesuai kebutuhan */
+    height: 250px; /* Atur tinggi peta sesuai kebutuhan */
     width: 100%; /* Lebarkan peta hingga mencakup keseluruhan area */
     border-radius: 8px;
     overflow: hidden; /* Hindari overflow konten peta */
