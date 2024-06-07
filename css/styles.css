@@ -554,7 +554,7 @@ html {
 
 /* Styling untuk rating */
 .popup-rating {
-    color: #FFD700; /* Warna bintang rating */
+    color: #555;
     font-size: 24px;
     margin-top: -10px;
 }
@@ -562,6 +562,7 @@ html {
 /* Styling untuk bintang rating */
 .popup-rating .fa {
     margin-right: 5px;
+    color: #FFD700;
 }
 
 /* Styling untuk bintang rating yang aktif */
